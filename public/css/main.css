@@ -1,11 +1,22 @@
 .search_page {
     position: relative;
     width:170px;
-    margin-left: 820px;
-    margin-top: 15px;
+    margin-left: 1430px;
+    margin-top: 10px;
 }
 
 .avatar {
-    position: relative;
-    margin-top: 10px;
+    position: absolute;
+    margin-left: 1600px;
+    margin-top: -35px;
+}
+
+.navbar{
+    height: 60px;
+}
+
+.av_dropdown {
+    position: absolute;
+    margin-left: 1700px;
+    margin-top: -25px;
 }

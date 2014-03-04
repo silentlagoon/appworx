@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>AppWorx</title>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/public/css/main.css">
 </head>
 <body>
     <div>
@@ -30,23 +29,26 @@
                         <div class="search_page">
                             <input type="text" class="form-control" placeholder="Search">
                         </div>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="avatar">
-                            <a href="javascript:;">
-                                <img src="<?php echo asset('/pics/amb.jpg') ?>" class="img-circle" width="50px;" height="50px;"/>
-                            </a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" data-toggle="dropdown"> <b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <div class="avatar">
+                        <ul>
+                            <div>
+                                <a href="javascript:;">
+                                    <img src="<?php echo asset('/pics/amb.jpg') ?>" class="img-circle" width="40px;" height="40px;"/>
+                                </a>
+                            </div>
+
+                        </ul>
+                    </div>
+                    <div class="av_dropdown">
+                        <a href="#" data-toggle="dropdown"> <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </div>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
