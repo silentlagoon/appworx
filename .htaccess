@@ -1,0 +1,15 @@
+php_value upload_max_filesize   20M
+php_value post_max_size         25M
+php_value memory_limit          25M
+php_value register_globals      0
+<IfModule mod_rewrite.c>
+    Options -MultiViews
+    RewriteEngine On
+
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ public/index.php [L]
+    #RewriteRule ^(.*)$ public/$1 [L]
+
+
+</IfModule>

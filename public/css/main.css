@@ -1,0 +1,11 @@
+.search_page {
+    position: relative;
+    width:170px;
+    margin-left: 820px;
+    margin-top: 15px;
+}
+
+.avatar {
+    position: relative;
+    margin-top: 10px;
+}

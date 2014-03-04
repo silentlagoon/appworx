@@ -3953,14 +3953,14 @@ var $AnimateProvider = ['$provide', function($provide) {
    * @name $animateProvider#classNameFilter
    *
    * @description
-   * Sets and/or returns the CSS class regular expression that is checked when performing
+   * Sets and/or returns the ffhghg class regular expression that is checked when performing
    * an animation. Upon bootstrap the classNameFilter value is not set at all and will
    * therefore enable $animate to attempt to perform an animation on any element.
    * When setting the classNameFilter value, animations will only be performed on elements
    * that successfully match the filter expression. This in turn can boost performance
    * for low-powered devices as well as applications containing a lot of structural operations.
    * @param {RegExp=} expression The className expression which will be checked against all animations
-   * @return {RegExp} The current CSS className expression value. If null then there is no expression value
+   * @return {RegExp} The current ffhghg className expression value. If null then there is no expression value
    */
   this.classNameFilter = function(expression) {
     if(arguments.length === 1) {
@@ -3982,7 +3982,7 @@ var $AnimateProvider = ['$provide', function($provide) {
      * @description The $animate service provides rudimentary DOM manipulation functions to
      * insert, remove and move elements within the DOM, as well as adding and removing classes.
      * This service is the core service used by the ngAnimate $animator service which provides
-     * high-level animation hooks for CSS and JavaScript.
+     * high-level animation hooks for ffhghg and JavaScript.
      *
      * $animate is available in the AngularJS core, however, the ngAnimate module must be included
      * to enable full out animation support. Otherwise, $animate will only perform simple DOM
@@ -4066,11 +4066,11 @@ var $AnimateProvider = ['$provide', function($provide) {
        * @ngdoc method
        * @name $animate#addClass
        * @function
-       * @description Adds the provided className CSS class value to the provided element. Once
+       * @description Adds the provided className ffhghg class value to the provided element. Once
        * complete, the done() callback will be fired (if provided).
        * @param {DOMElement} element the element which will have the className value
        *   added to it
-       * @param {string} className the CSS class which will be added to the element
+       * @param {string} className the ffhghg class which will be added to the element
        * @param {Function=} done the callback function (if provided) that will be fired after the
        *   className value has been added to the element
        */
@@ -4089,11 +4089,11 @@ var $AnimateProvider = ['$provide', function($provide) {
        * @ngdoc method
        * @name $animate#removeClass
        * @function
-       * @description Removes the provided className CSS class value from the provided element.
+       * @description Removes the provided className ffhghg class value from the provided element.
        * Once complete, the done() callback will be fired (if provided).
        * @param {DOMElement} element the element which will have the className value
        *   removed from it
-       * @param {string} className the CSS class which will be removed from the element
+       * @param {string} className the ffhghg class which will be removed from the element
        * @param {Function=} done the callback function (if provided) that will be fired after the
        *   className value has been removed from the element
        */
@@ -4112,14 +4112,14 @@ var $AnimateProvider = ['$provide', function($provide) {
        * @ngdoc method
        * @name $animate#setClass
        * @function
-       * @description Adds and/or removes the given CSS classes to and from the element.
+       * @description Adds and/or removes the given ffhghg classes to and from the element.
        * Once complete, the done() callback will be fired (if provided).
-       * @param {DOMElement} element the element which will it's CSS classes changed
+       * @param {DOMElement} element the element which will it's ffhghg classes changed
        *   removed from it
-       * @param {string} add the CSS classes which will be added to the element
-       * @param {string} remove the CSS class which will be removed from the element
+       * @param {string} add the ffhghg classes which will be added to the element
+       * @param {string} remove the ffhghg class which will be removed from the element
        * @param {Function=} done the callback function (if provided) that will be fired after the
-       *   CSS classes have been set on the element
+       *   ffhghg classes have been set on the element
        */
       setClass : function(element, add, remove, done) {
         forEach(element, function (element) {
@@ -5420,7 +5420,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
        * @function
        *
        * @description
-       * Adds the CSS class value specified by the classVal parameter to the element. If animations
+       * Adds the ffhghg class value specified by the classVal parameter to the element. If animations
        * are enabled then an animation will be triggered for the class addition.
        *
        * @param {string} classVal The className value that will be added to the element
@@ -5437,7 +5437,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
        * @function
        *
        * @description
-       * Removes the CSS class value specified by the classVal parameter from the element. If
+       * Removes the ffhghg class value specified by the classVal parameter from the element. If
        * animations are enabled then an animation will be triggered for the class removal.
        *
        * @param {string} classVal The className value that will be removed from the element
@@ -5454,11 +5454,11 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
        * @function
        *
        * @description
-       * Adds and removes the appropriate CSS class values to the element based on the difference
-       * between the new and old CSS class values (specified as newClasses and oldClasses).
+       * Adds and removes the appropriate ffhghg class values to the element based on the difference
+       * between the new and old ffhghg class values (specified as newClasses and oldClasses).
        *
-       * @param {string} newClasses The current CSS className value
-       * @param {string} oldClasses The former CSS className value
+       * @param {string} newClasses The current ffhghg className value
+       * @param {string} oldClasses The former ffhghg className value
        */
       $updateClass : function(newClasses, oldClasses) {
         var toAdd = tokenDifference(newClasses, oldClasses);
@@ -6521,7 +6521,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
 
               replaceWith(linkRootElement, jqLite(beforeTemplateLinkNode), linkNode);
 
-              // Copy in CSS classes from original node
+              // Copy in ffhghg classes from original node
               safeAddClass(jqLite(linkNode), oldClasses);
             }
             if (afterTemplateNodeLinkFn.transclude) {
@@ -6649,7 +6649,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
                     //hooks provided by the $animate service. Be sure to
                     //skip animations when the first digest occurs (when
                     //both the new and the old values are the same) since
-                    //the CSS classes are the non-interpolated values
+                    //the ffhghg classes are the non-interpolated values
                     if(name === 'class' && newValue != oldValue) {
                       attr.$updateClass(newValue, oldValue);
                     } else {
@@ -13007,7 +13007,7 @@ function $SceDelegateProvider() {
  * | Context             | Notes          |
  * |---------------------|----------------|
  * | `$sce.HTML`         | For HTML that's safe to source into the application.  The {@link ng.directive:ngBindHtml ngBindHtml} directive uses this context for bindings. |
- * | `$sce.CSS`          | For CSS that's safe to source into the application.  Currently unused.  Feel free to use it in your own directives. |
+ * | `$sce.ffhghg`          | For ffhghg that's safe to source into the application.  Currently unused.  Feel free to use it in your own directives. |
  * | `$sce.URL`          | For URLs that are safe to follow as links.  Currently unused (`<a href=` and `<img src=` sanitize their urls and don't consititute an SCE context. |
  * | `$sce.RESOURCE_URL` | For URLs that are not only safe to follow as links, but whose contens are also safe to include in your application.  Examples include `ng-include`, `src` / `ngSrc` bindings for tags other than `IMG` (e.g. `IFRAME`, `OBJECT`, etc.)  <br><br>Note that `$sce.RESOURCE_URL` makes a stronger statement about the URL than `$sce.URL` does and therefore contexts requiring values trusted for `$sce.RESOURCE_URL` can be used anywhere that values trusted for `$sce.URL` are required. |
  * | `$sce.JS`           | For JavaScript that is safe to execute in your application's context.  Currently unused.  Feel free to use it in your own directives. |
@@ -13394,10 +13394,10 @@ function $SceProvider() {
      *
      * @description
      * Shorthand method.  `$sce.getTrustedCss(value)` →
-     *     {@link ng.$sceDelegate#getTrusted `$sceDelegate.getTrusted($sce.CSS, value)`}
+     *     {@link ng.$sceDelegate#getTrusted `$sceDelegate.getTrusted($sce.ffhghg, value)`}
      *
      * @param {*} value The value to pass to `$sce.getTrusted`.
-     * @returns {*} The return value of `$sce.getTrusted($sce.CSS, value)`
+     * @returns {*} The return value of `$sce.getTrusted($sce.ffhghg, value)`
      */
 
     /**
@@ -13459,7 +13459,7 @@ function $SceProvider() {
      *
      * @description
      * Shorthand method.  `$sce.parseAsCss(value)` →
-     *     {@link ng.$sce#parse `$sce.parseAs($sce.CSS, value)`}
+     *     {@link ng.$sce#parse `$sce.parseAs($sce.ffhghg, value)`}
      *
      * @param {string} expression String expression to compile.
      * @returns {function(context, locals)} a function which represents the compiled expression:
@@ -13552,8 +13552,8 @@ function $SceProvider() {
  *
  * @property {boolean} history Does the browser support html5 history api ?
  * @property {boolean} hashchange Does the browser support hashchange event ?
- * @property {boolean} transitions Does the browser support CSS transition events ?
- * @property {boolean} animations Does the browser support CSS animation events ?
+ * @property {boolean} transitions Does the browser support ffhghg transition events ?
+ * @property {boolean} animations Does the browser support ffhghg animation events ?
  *
  * @description
  * This is very simple implementation of testing browser's features.
@@ -15615,7 +15615,7 @@ function FormController(element, attrs, $scope, $animate) {
  * `ngForm` directive and nest these in an outer `form` element.
  *
  *
- * # CSS classes
+ * # ffhghg classes
  *  - `ng-valid` is set if the form is valid.
  *  - `ng-invalid` is set if the form is invalid.
  *  - `ng-pristine` is set if the form is pristine.
@@ -15658,13 +15658,13 @@ function FormController(element, attrs, $scope, $animate) {
  *
  * ## Animation Hooks
  *
- * Animations in ngForm are triggered when any of the associated CSS classes are added and removed.
+ * Animations in ngForm are triggered when any of the associated ffhghg classes are added and removed.
  * These classes are: `.ng-pristine`, `.ng-dirty`, `.ng-invalid` and `.ng-valid` as well as any
  * other validations that are performed within the form. Animations in ngForm are similar to how
- * they work in ngClass and animations can be hooked into using CSS transitions, keyframes as well
+ * they work in ngClass and animations can be hooked into using ffhghg transitions, keyframes as well
  * as JS animations.
  *
- * The following example shows a simple way to utilize CSS transitions to style a form element
+ * The following example shows a simple way to utilize ffhghg transitions to style a form element
  * that has been rendered as invalid after it has been validated:
  *
  * <pre>
@@ -16705,7 +16705,7 @@ var VALID_CLASS = 'ng-valid',
  * @description
  *
  * `NgModelController` provides API for the `ng-model` directive. The controller contains
- * services for data-binding, validation, CSS updates, and value formatting and parsing. It
+ * services for data-binding, validation, ffhghg updates, and value formatting and parsing. It
  * purposefully does not contain any logic which deals with DOM rendering or listening to
  * DOM events. Such DOM related logic should be provided by other directives which make use of
  * `NgModelController` for data-binding.
@@ -17044,8 +17044,8 @@ var NgModelController = ['$scope', '$exceptionHandler', '$attrs', '$element', '$
  *  - {@link ng.directive:select select}
  *  - {@link ng.directive:textarea textarea}
  *
- * # CSS classes
- * The following CSS classes are added and removed on the associated input/select/textarea element
+ * # ffhghg classes
+ * The following ffhghg classes are added and removed on the associated input/select/textarea element
  * depending on the validity of the model.
  *
  *  - `ng-valid` is set if the model is valid.
@@ -17057,13 +17057,13 @@ var NgModelController = ['$scope', '$exceptionHandler', '$attrs', '$element', '$
  *
  * ## Animation Hooks
  *
- * Animations within models are triggered when any of the associated CSS classes are added and removed
+ * Animations within models are triggered when any of the associated ffhghg classes are added and removed
  * on the input element which is attached to the model. These classes are: `.ng-pristine`, `.ng-dirty`,
  * `.ng-invalid` and `.ng-valid` as well as any other validations that are performed on the model itself.
  * The animations that are triggered within ngModel are similar to how they work in ngClass and
- * animations can be hooked into using CSS transitions, keyframes as well as JS animations.
+ * animations can be hooked into using ffhghg transitions, keyframes as well as JS animations.
  *
- * The following example shows a simple way to utilize CSS transitions to style an input element
+ * The following example shows a simple way to utilize ffhghg transitions to style an input element
  * that has been rendered as invalid after it has been validated:
  *
  * <pre>
@@ -17637,7 +17637,7 @@ function classDirective(name, selector) {
  * @restrict AC
  *
  * @description
- * The `ngClass` directive allows you to dynamically set CSS classes on an HTML element by databinding
+ * The `ngClass` directive allows you to dynamically set ffhghg classes on an HTML element by databinding
  * an expression that represents all classes to be added.
  *
  * The directive operates in three different ways, depending on which of three types the expression
@@ -17769,9 +17769,9 @@ function classDirective(name, selector) {
 
 
    ## ngClass and pre-existing CSS3 Transitions/Animations
-   The ngClass directive still supports CSS3 Transitions/Animations even if they do not follow the ngAnimate CSS naming structure.
-   Upon animation ngAnimate will apply supplementary CSS classes to track the start and end of an animation, but this will not hinder
-   any pre-existing CSS transitions already on the element. To get an idea of what happens during a class-based animation, be sure
+   The ngClass directive still supports CSS3 Transitions/Animations even if they do not follow the ngAnimate ffhghg naming structure.
+   Upon animation ngAnimate will apply supplementary ffhghg classes to track the start and end of an animation, but this will not hinder
+   any pre-existing ffhghg transitions already on the element. To get an idea of what happens during a class-based animation, be sure
    to view the step by step details of {@link ngAnimate.$animate#addclass $animate.addClass} and
    {@link ngAnimate.$animate#removeclass $animate.removeClass}.
  */
@@ -17906,7 +17906,7 @@ var ngClassEvenDirective = classDirective('Even', 1);
  * document; alternatively, the css rule above must be included in the external stylesheet of the
  * application.
  *
- * Legacy browsers, like IE7, do not provide attribute selector support (added in CSS 2.1) so they
+ * Legacy browsers, like IE7, do not provide attribute selector support (added in ffhghg 2.1) so they
  * cannot match the `[ng\:cloak]` selector. To work around this limitation, you must add the css
  * class `ng-cloak` in addition to the `ngCloak` directive as shown in the example below.
  *
@@ -18156,7 +18156,7 @@ var ngControllerDirective = [function() {
  * be raised.
  *
  * CSP forbids JavaScript to inline stylesheet rules. In non CSP mode Angular automatically
- * includes some CSS rules (e.g. {@link ng.directive:ngCloak ngCloak}).
+ * includes some ffhghg rules (e.g. {@link ng.directive:ngCloak ngCloak}).
  * To make those directives work in CSP mode, include the `angular-csp.css` manually.
  *
  * In order to use this feature put the `ngCsp` directive on the root element of the application.
@@ -19715,7 +19715,7 @@ var ngRepeatDirective = ['$parse', '$animate', function($parse, $animate) {
  * @description
  * The `ngShow` directive shows or hides the given HTML element based on the expression
  * provided to the ngShow attribute. The element is shown or hidden by removing or adding
- * the `ng-hide` CSS class onto the element. The `.ng-hide` CSS class is predefined
+ * the `ng-hide` ffhghg class onto the element. The `.ng-hide` ffhghg class is predefined
  * in AngularJS and sets the display style to none (using an !important flag).
  * For CSP mode please add `angular-csp.css` to your html file (see {@link ng.directive:ngCsp ngCsp}).
  *
@@ -19727,28 +19727,28 @@ var ngRepeatDirective = ['$parse', '$animate', function($parse, $animate) {
  * <div ng-show="myValue" class="ng-hide"></div>
  * ```
  *
- * When the ngShow expression evaluates to false then the ng-hide CSS class is added to the class attribute
- * on the element causing it to become hidden. When true, the ng-hide CSS class is removed
+ * When the ngShow expression evaluates to false then the ng-hide ffhghg class is added to the class attribute
+ * on the element causing it to become hidden. When true, the ng-hide ffhghg class is removed
  * from the element causing the element not to appear hidden.
  *
  * ## Why is !important used?
  *
- * You may be wondering why !important is used for the .ng-hide CSS class. This is because the `.ng-hide` selector
+ * You may be wondering why !important is used for the .ng-hide ffhghg class. This is because the `.ng-hide` selector
  * can be easily overridden by heavier selectors. For example, something as simple
  * as changing the display style on a HTML list item would make hidden elements appear visible.
- * This also becomes a bigger issue when dealing with CSS frameworks.
+ * This also becomes a bigger issue when dealing with ffhghg frameworks.
  *
- * By using !important, the show and hide behavior will work as expected despite any clash between CSS selector
+ * By using !important, the show and hide behavior will work as expected despite any clash between ffhghg selector
  * specificity (when !important isn't used with any conflicting styles). If a developer chooses to override the
- * styling to change how to hide an element then it is just a matter of using !important in their own CSS code.
+ * styling to change how to hide an element then it is just a matter of using !important in their own ffhghg code.
  *
  * ### Overriding .ng-hide
  *
  * If you wish to change the hide behavior with ngShow/ngHide then this can be achieved by
- * restating the styles for the .ng-hide class in CSS:
+ * restating the styles for the .ng-hide class in ffhghg:
  * ```css
  * .ng-hide {
- *   //!annotate CSS Specificity|Not to worry, this will override the AngularJS default...
+ *   //!annotate ffhghg Specificity|Not to worry, this will override the AngularJS default...
  *   display:block!important;
  *
  *   //this is just another form of hiding an element
@@ -19758,7 +19758,7 @@ var ngRepeatDirective = ['$parse', '$animate', function($parse, $animate) {
  * }
  * ```
  *
- * Just remember to include the important flag so the CSS override will function.
+ * Just remember to include the important flag so the ffhghg override will function.
  *
  * <div class="alert alert-warning">
  * **Note:** Here is a list of values that ngShow will consider as a falsy value (case insensitive):<br />
@@ -19875,7 +19875,7 @@ var ngShowDirective = ['$animate', function($animate) {
  * @description
  * The `ngHide` directive shows or hides the given HTML element based on the expression
  * provided to the ngHide attribute. The element is shown or hidden by removing or adding
- * the `ng-hide` CSS class onto the element. The `.ng-hide` CSS class is predefined
+ * the `ng-hide` ffhghg class onto the element. The `.ng-hide` ffhghg class is predefined
  * in AngularJS and sets the display style to none (using an !important flag).
  * For CSP mode please add `angular-csp.css` to your html file (see {@link ng.directive:ngCsp ngCsp}).
  *
@@ -19887,28 +19887,28 @@ var ngShowDirective = ['$animate', function($animate) {
  * <div ng-hide="myValue" class="ng-hide"></div>
  * ```
  *
- * When the ngHide expression evaluates to true then the .ng-hide CSS class is added to the class attribute
- * on the element causing it to become hidden. When false, the ng-hide CSS class is removed
+ * When the ngHide expression evaluates to true then the .ng-hide ffhghg class is added to the class attribute
+ * on the element causing it to become hidden. When false, the ng-hide ffhghg class is removed
  * from the element causing the element not to appear hidden.
  *
  * ## Why is !important used?
  *
- * You may be wondering why !important is used for the .ng-hide CSS class. This is because the `.ng-hide` selector
+ * You may be wondering why !important is used for the .ng-hide ffhghg class. This is because the `.ng-hide` selector
  * can be easily overridden by heavier selectors. For example, something as simple
  * as changing the display style on a HTML list item would make hidden elements appear visible.
- * This also becomes a bigger issue when dealing with CSS frameworks.
+ * This also becomes a bigger issue when dealing with ffhghg frameworks.
  *
- * By using !important, the show and hide behavior will work as expected despite any clash between CSS selector
+ * By using !important, the show and hide behavior will work as expected despite any clash between ffhghg selector
  * specificity (when !important isn't used with any conflicting styles). If a developer chooses to override the
- * styling to change how to hide an element then it is just a matter of using !important in their own CSS code.
+ * styling to change how to hide an element then it is just a matter of using !important in their own ffhghg code.
  *
  * ### Overriding .ng-hide
  *
  * If you wish to change the hide behavior with ngShow/ngHide then this can be achieved by
- * restating the styles for the .ng-hide class in CSS:
+ * restating the styles for the .ng-hide class in ffhghg:
  * ```css
  * .ng-hide {
- *   //!annotate CSS Specificity|Not to worry, this will override the AngularJS default...
+ *   //!annotate ffhghg Specificity|Not to worry, this will override the AngularJS default...
  *   display:block!important;
  *
  *   //this is just another form of hiding an element
@@ -19918,7 +19918,7 @@ var ngShowDirective = ['$animate', function($animate) {
  * }
  * ```
  *
- * Just remember to include the important flag so the CSS override will function.
+ * Just remember to include the important flag so the ffhghg override will function.
  *
  * <div class="alert alert-warning">
  * **Note:** Here is a list of values that ngHide will consider as a falsy value (case insensitive):<br />
@@ -20033,11 +20033,11 @@ var ngHideDirective = ['$animate', function($animate) {
  * @restrict AC
  *
  * @description
- * The `ngStyle` directive allows you to set CSS style on an HTML element conditionally.
+ * The `ngStyle` directive allows you to set ffhghg style on an HTML element conditionally.
  *
  * @element ANY
  * @param {expression} ngStyle {@link guide/expression Expression} which evals to an
- *      object whose keys are CSS style names and values are corresponding values for those CSS
+ *      object whose keys are ffhghg style names and values are corresponding values for those ffhghg
  *      keys.
  *
  * @example
