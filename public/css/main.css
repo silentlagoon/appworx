@@ -1,22 +1,236 @@
+.container-fluid {
+    margin-left: 185px;
+}
+
+.patients {
+    margin-left: 40px;
+    font-size: 16px;
+}
+
+.content {
+    margin-left: 60px;
+    font-size: 16px;
+}
+
+.administration {
+    margin-left: 60px;
+    font-size: 16px;
+}
+
 .search_page {
     position: relative;
     width:170px;
-    margin-left: 1430px;
+    margin-left: 1000px;
     margin-top: 10px;
 }
 
 .avatar {
     position: absolute;
-    margin-left: 1600px;
+    margin-left: 1175px;
     margin-top: -35px;
 }
 
 .navbar{
     height: 60px;
+    border: solid 1px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 2px -2px gray;
 }
 
 .av_dropdown {
     position: absolute;
-    margin-left: 1700px;
+    margin-left: 1265px;
     margin-top: -25px;
 }
+
+.infopanel {
+    position: absolute;
+    width: 1400px;
+    height: 100px;
+    left: 200px;
+    padding-top: 10px;
+    border: solid 1px #ffffff;
+    background-color: #ffffff;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+.infopanel_avatar {
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+.infopanel_uderdata {
+    margin-left: 130px;
+    margin-top: -45px;
+}
+
+.infopanel_uderdata_name{
+    font-size: 28px;
+    color: grey;
+}
+
+.infopanel_lastvisit {
+    position: relative;
+    margin-left: 400px;
+    margin-top: -50px;
+}
+
+.infopanel_lastvisit_date {
+    color: grey;
+}
+
+.infopanel_enrolledid {
+    margin-left: 550px;
+    margin-top: -40px;
+}
+
+.infopanel_enrolledid_name {
+    color: grey;
+}
+
+.infopanel_edit_profile_button {
+    margin-left: 800px;
+    margin-top: -40px;
+}
+
+.infopanel_archive_button {
+    margin-left: 890px;
+    margin-top: -30px;
+}
+
+.infopanel_report_button {
+    margin-left: 975px;
+    margin-top: -30px;
+}
+
+.diagmosis {
+    margin-top: 110px;
+    position: absolute;
+    width: 250px;
+    height: 200px;
+    left: 200px;
+    padding-top: 10px;
+    border: solid 1px #ffffff;
+    background-color: #ffffff;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+.diagnosis_header {
+    font-size: 24px;
+    color: grey;
+    margin-left: 25px;
+    margin-top: 15px;
+}
+
+.diagnosis_plus_button {
+    margin-left: 200px;
+    margin-top: -35px;
+}
+
+.treatment {
+    margin-top: 320px;
+    position: absolute;
+    width: 250px;
+    height: 300px;
+    left: 200px;
+    padding-top: 10px;
+    border: solid 1px #ffffff;
+    background-color: #ffffff;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+.treatment_header {
+    font-size: 24px;
+    color: grey;
+    margin-left: 25px;
+    margin-top: 15px;
+}
+
+.treatment_plus_button {
+    margin-left: 200px;
+    margin-top: -35px;
+}
+
+.content_page {
+    margin-top: 110px;
+    position: absolute;
+    width: 1140px;
+    height: 1000px;
+    left: 460px;
+    padding-top: 10px;
+    border: solid 1px #ffffff;
+    background-color: #ffffff;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+.notes_page {
+    margin-top: 1120px;
+    position: absolute;
+    width: 1140px;
+    height: 500px;
+    left: 460px;
+    padding-top: 10px;
+    border: solid 1px #ffffff;
+    background-color: #ffffff;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+.notes_header {
+    font-size: 24px;
+    color: grey;
+    margin-left: 40px;
+    margin-top: 15px;
+}
+
+.notes_plus_button {
+    margin-left: 1080px;
+    margin-top: -35px;
+}
+
+.notes_list {
+    word-wrap: break-word;
+}
+
+.photos_header {
+    font-size: 24px;
+    color: grey;
+    margin-left: 40px;
+    margin-top: 15px;
+}
+
+.photos_sort_by_selecter {
+    margin-left: 170px;
+    margin-top: -30px;
+}
+
+.photos_filter_by_body_selecter {
+    margin-left: 400px;
+    margin-top: -20px;
+}
+
+.filter_by_header {
+    font-size: 16px;
+    color: grey;
+    margin-top: -20px;
+    margin-left: 320px;
+}
+
+.photos_filter_by_date_selecter {
+    margin-left: 500px;
+    margin-top: -20px;
+}
+
+.photos_filter {
+    margin-left: 40px;
+}
+
+.content_page_unknown_button {
+    margin-left: 630px;
+    margin-top: -25px;
+}
+
+.content_page_plus_button {
+    margin-left: 670px;
+    margin-top: -30px;
+}
+
