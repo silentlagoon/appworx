@@ -43,12 +43,19 @@ class AuthController extends BaseController
     {
         $user_credentials = Input::all();
         $user = new User();
-        $user->username = $user_credentials['login'];
-        $user->password = $user_credentials['password'];
-        $user->token  = $this->makeToken();
-        $user->save();
-        Session::put('token', $user->token);
-        return Redirect::to('/index');
+        if($user->Correct($user_credentials) === false)
+        {
+            $user->username = $user_credentials['login'];
+            $user->password = $user_credentials['password'];
+            $user->token  = $this->makeToken();
+            $user->save();
+            Session::put('token', $user->token);
+            return Redirect::to('/index');
+        }
+        else
+        {
+            return View::make('layouts.main')->nest('content', 'error', array('error' => $user_credentials['login'].' already taken'));
+        }
     }
 
     public function makeToken()

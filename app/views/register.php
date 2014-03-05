@@ -1,15 +1,15 @@
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
     <div class="register_form">
-        <form method="post" action="/proceed">
-            <label form="login">Login:</label>
+        <?= Form::open(array('url' => '/proceed')); ?>
+        <?= Form::label('login', 'Login:'); ?>
             <br/>
-            <input name="login" id="login" type="text"/>
+        <?= Form::text('login'); ?>
             <br/>
-            <label for="password">Password:</label>
+        <?= Form::label('password', 'Password:'); ?>
             <br/>
-            <input name="password" id="password" type="password"/>
+        <?= Form::password('password'); ?>
             <br/>
             <br/>
             <button class="btn btn-success" type="submit">Register</button>
-        </form>
+        <?= Form::close(); ?>
     </div>

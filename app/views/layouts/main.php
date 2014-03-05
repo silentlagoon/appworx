@@ -61,6 +61,6 @@
     <script src="<?php echo asset('/js/jquery.js') ?>"></script>
     <link href="<?php echo asset('/css/main.css') ?>" rel="stylesheet">
     <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.6.0.js"></script>
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 </body>
 </html>
