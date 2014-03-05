@@ -24,12 +24,12 @@ class AuthController extends BaseController
 
     public function Login()
     {
-        return View::make('login');
+        return View::make('layouts.main')->nest('content', 'login');
     }
 
     public function Register()
     {
-        return View::make('register');
+        return View::make('layouts.main')->nest('content', 'register');
     }
 
     public function Proceed()

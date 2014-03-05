@@ -52,6 +52,7 @@
     border: solid 1px #ffffff;
     background-color: #ffffff;
     box-shadow: 0 4px 2px -2px gray;
+    z-index: 1;
 }
 
 .infopanel_avatar {
@@ -62,17 +63,20 @@
 .infopanel_uderdata {
     margin-left: 130px;
     margin-top: -45px;
+    width: 100px;
 }
 
 .infopanel_uderdata_name{
     font-size: 28px;
     color: grey;
+    width: 150px;
 }
 
 .infopanel_lastvisit {
     position: relative;
     margin-left: 400px;
     margin-top: -50px;
+    width: 100px;
 }
 
 .infopanel_lastvisit_date {
@@ -234,3 +238,16 @@
     margin-top: -30px;
 }
 
+.modal {
+    display: block;
+}
+
+.register_form {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.login_form {
+    margin-top: 100px;
+    text-align: center;
+}
