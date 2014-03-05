@@ -24,7 +24,14 @@ class AuthController extends BaseController
 
     public function Login()
     {
-        return View::make('layouts.main')->nest('content', 'login');
+        if(Session::has('token'))
+        {
+            return Redirect::to('/');
+        }
+        else
+        {
+            return View::make('layouts.main')->nest('content', 'login');
+        }
     }
 
     public function Register()
