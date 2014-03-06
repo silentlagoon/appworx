@@ -1,27 +1,6 @@
 <?php
 class AuthController extends BaseController
 {
-    public function isLoggedIn()
-    {
-        $token = Session::get('token');
-        if($token)
-        {
-            $user = new User();
-            if ($user->getUser($token))
-            {
-                return Redirect::to('/index');
-            }
-            else
-            {
-                return Redirect::to('/login');
-            }
-        }
-        else
-        {
-            return Redirect::to('/login');
-        }
-    }
-
     public function Login()
     {
         if(Session::has('token'))
@@ -45,12 +24,9 @@ class AuthController extends BaseController
         $user = new User();
         if($user->Correct($user_credentials) === false)
         {
-            $user->username = $user_credentials['email'];
-            $user->password = $user_credentials['password'];
-            $user->token  = $this->makeToken();
-            $user->save();
+            $user->Register($user_credentials, $this->makeToken());
             Session::put('token', $user->token);
-            return Redirect::to('/index');
+            return Redirect::to('/');
         }
         else
         {
@@ -70,7 +46,7 @@ class AuthController extends BaseController
         if($user = $user->Correct($user_credentials))
         {
             Session::put('token', $user->token);
-            return Redirect::to('/index');
+            return Redirect::to('/');
         }
         else
         {

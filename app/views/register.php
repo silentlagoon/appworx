@@ -4,7 +4,7 @@
         <?= Form::open(array('url' => '/proceed')); ?>
         <?= Form::label('email', 'Email:'); ?>
             <br/>
-        <?= Form::text('login'); ?>
+        <?= Form::text('email'); ?>
             <br/>
         <?= Form::label('password', 'Password:'); ?>
             <br/>

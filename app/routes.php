@@ -11,10 +11,9 @@
 |
 */
 
-Route::get('/', 'AuthController@isLoggedIn');
-Route::get('/index', 'PageController@Index');
-Route::get('/login', 'AuthController@Login');
-Route::get('/logout', 'AuthController@Logout');
-Route::get('/register', 'AuthController@Register');
-Route::post('/verify', 'AuthController@Verify');
-Route::post('/proceed', 'AuthController@Proceed');
+Route::get  ('/login', 'AuthController@Login');
+Route::get  ('/logout', 'AuthController@Logout');
+Route::get  ('/register', 'AuthController@Register');
+Route::post ('/verify', 'AuthController@Verify');
+Route::post ('/proceed', 'AuthController@Proceed');
+Route::get  ('/', 'PageController@Index');
