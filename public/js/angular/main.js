@@ -17,7 +17,7 @@ var ModalCtrl = function ($scope, $modal, $log) {
             templateUrl: 'register.html',
             controller: modalRegisterCtrl
         });
-        modalLogin.result.then(function(){
+        modalRegister.result.then(function(){
 
         }, function () {
             $log.info('Modal dismissed at: ' + new Date());
@@ -25,7 +25,7 @@ var ModalCtrl = function ($scope, $modal, $log) {
     }
 };
 
-var modalLoginCtrl = function($scope, $http, $modalInstance) {
+var modalLoginCtrl = function($scope, $http, $modalInstance, $window) {
     $scope.credentials = {email: '',password: ''};
     $scope.login = function () {
         $http({
@@ -33,10 +33,14 @@ var modalLoginCtrl = function($scope, $http, $modalInstance) {
             url: '/verify',
             data: $scope.credentials
         }).
-            success(function(){
-                $modalInstance.close()
-            }).
-            error(function(){
+            success(function(data){
+                if(data === 'Ok') {
+                    $modalInstance.close();
+                    $window.location.href = '/';
+                }
+                if(data === 'Bad') {
+                    $scope.error = 'Incorrect data provided';
+                }
             })
     };
     $scope.cancel = function () {
@@ -44,7 +48,7 @@ var modalLoginCtrl = function($scope, $http, $modalInstance) {
     };
 };
 
-var modalRegisterCtrl = function($scope, $http, $modalInstance) {
+var modalRegisterCtrl = function($scope, $http, $modalInstance, $window) {
     $scope.credentials = {email: '', password: ''};
     $scope.register = function() {
         $http({
@@ -52,12 +56,17 @@ var modalRegisterCtrl = function($scope, $http, $modalInstance) {
             url: '/proceed',
             data: $scope.credentials
         }).
-            success(function() {
-                $modalInstance.close()
-            }).error(function(){
+            success(function(data) {
+                if(data === 'Ok') {
+                    $modalInstance.close()
+                    $window.location.href = '/';
+                }
+                if(data === 'Bad') {
+                    $scope.error = 'Incorrect data provided';
+                }
             })
-    }
+    };
     $scope.cancel = function () {
         $modalInstance.close();
     };
-}
+};

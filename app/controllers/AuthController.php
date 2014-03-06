@@ -1,23 +1,6 @@
 <?php
 class AuthController extends BaseController
 {
-    public function Login()
-    {
-        if(Session::has('token'))
-        {
-            return Redirect::to('/');
-        }
-        else
-        {
-            return View::make('layouts.main')->nest('content', 'login');
-        }
-    }
-
-    public function Register()
-    {
-        return View::make('layouts.main')->nest('content', 'register');
-    }
-
     public function Proceed()
     {
         $user_credentials = Input::all();
@@ -26,11 +9,11 @@ class AuthController extends BaseController
         {
             $user = $user->Register($user_credentials, $this->makeToken());
             Session::put('token', $user->token);
-            return Redirect::to('/');
+            return 'Ok';
         }
         else
         {
-            return View::make('layouts.main')->nest('content', 'error', array('error' => $user_credentials['email'].' already taken'));
+            return 'Bad';
         }
     }
 
@@ -46,11 +29,11 @@ class AuthController extends BaseController
         if($user = $user->Correct($user_credentials))
         {
             Session::put('token', $user->token);
-            return Redirect::to('/');
+            return 'Ok';
         }
         else
         {
-            return Redirect::to('/login');
+            return 'Bad';
         }
     }
 

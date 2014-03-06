@@ -24,11 +24,9 @@
                     Tom Smith
                 </div>
             </div>
-            <div ng-controller="ModalDemoCtrl">
                 <div class="infopanel_edit_profile_button">
                     <button class="btn btn-default btn-sm" ng-click="open()">Edit Profile</button>
                 </div>
-            </div>
             <div class="infopanel_archive_button">
                 <button class="btn btn-default btn-sm">Archive</button>
             </div>
