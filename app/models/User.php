@@ -11,7 +11,7 @@ class User extends Eloquent
 
     public function Correct($user)
     {
-        $query = User::where('username', '=', $user['login'])
+        $query = User::where('username', '=', $user['email'])
             ->where('password', '=', $user['password'])
             ->first();
         return ($query) ? $query : false;

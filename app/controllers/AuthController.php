@@ -45,7 +45,7 @@ class AuthController extends BaseController
         $user = new User();
         if($user->Correct($user_credentials) === false)
         {
-            $user->username = $user_credentials['login'];
+            $user->username = $user_credentials['email'];
             $user->password = $user_credentials['password'];
             $user->token  = $this->makeToken();
             $user->save();
@@ -54,7 +54,7 @@ class AuthController extends BaseController
         }
         else
         {
-            return View::make('layouts.main')->nest('content', 'error', array('error' => $user_credentials['login'].' already taken'));
+            return View::make('layouts.main')->nest('content', 'error', array('error' => $user_credentials['email'].' already taken'));
         }
     }
 

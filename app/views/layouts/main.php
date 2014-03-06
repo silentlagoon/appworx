@@ -26,6 +26,7 @@
                         <li class="content"><a href="#">Content</a></li>
                         <li class="administration"><a href="#">Administration</a></li>
                     </div>
+                    <?php if(Session::has('token')) { ?>
                         <div class="search_page">
                             <input type="text" class="form-control" placeholder="Search">
                         </div>
@@ -49,6 +50,16 @@
                             <li><a href="/logout">Log out</a></li>
                         </ul>
                     </div>
+                    <?php } else { ?>
+                    <div class="nav_bar_login_register">
+                        <div class="nav_bar_login">
+                            <a href="/login">Login</a>
+                        </div>
+                        <div class="nav_bar_register">
+                            <a href="/register">Register</a>
+                        </div>
+                    </div>
+                    <?php } ?>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>

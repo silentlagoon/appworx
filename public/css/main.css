@@ -249,3 +249,14 @@
     margin-top: 100px;
     text-align: center;
 }
+
+.nav_bar_login_register {
+    float: right;
+    padding-right: 100px;
+    margin-top: 5px;
+    display: table-cell;
+}
+
+.nav_bar_login {
+    padding-bottom: 5px;
+}
