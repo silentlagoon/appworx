@@ -51,14 +51,16 @@
                         </ul>
                     </div>
                     <?php } else { ?>
+                <div ng-controller="ModalCtrl">
                     <div class="nav_bar_login_register">
-                        <div class="nav_bar_login">
-                            <a href="/login">Login</a>
+                        <div class="nav_bar_login" ng-click="login()">
+                            Login
                         </div>
-                        <div class="nav_bar_register">
-                            <a href="/register">Register</a>
+                        <div class="nav_bar_register" ng-click="register()">
+                           Register
                         </div>
                     </div>
+                </div>
                     <?php } ?>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
@@ -67,6 +69,7 @@
     <?php echo $content ?>
     <script src="<?php echo asset('/js/angular/angular.js') ?>"></script>
     <script src="<?php echo asset('/js/angular/main.js') ?>"></script>
+    <script src="<?php echo asset('/js/angular/angular-route.min.js') ?>"></script>
     <script src="<?php echo asset('/js/jquery.js') ?>"></script>
     <link href="<?php echo asset('/css/main.css') ?>" rel="stylesheet">
     <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.6.0.js"></script>

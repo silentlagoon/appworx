@@ -259,3 +259,19 @@
 .nav_bar_login {
     padding-bottom: 5px;
 }
+
+#login_field_email {
+    width: 300px;
+}
+
+#login_field_password {
+    width: 300px;
+}
+
+#modal_body_login_form {
+    margin-left: 120px;
+}
+
+#login_field_repassword {
+    width: 300px;
+}

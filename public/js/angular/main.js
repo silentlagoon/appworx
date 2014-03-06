@@ -1,44 +1,63 @@
 var app = angular.module('appWorx', ['ui.bootstrap']);
 
-var ModalDemoCtrl = function ($scope, $modal, $log) {
-
-    $scope.open = function () {
-
-        var modalInstance = $modal.open({
-            templateUrl: 'modal.html',
-            controller: ModalInstanceCtrl,
-            resolve: {
-                items: function () {
-                    return $scope.profile;
-                }
-            }
+var ModalCtrl = function ($scope, $modal, $log) {
+    $scope.login = function() {
+            var modalLogin = $modal.open({
+            templateUrl: 'login.html',
+            controller: modalLoginCtrl
         });
+        modalLogin.result.then(function(){
 
-        modalInstance.result.then(function (selectedItem) {
-            $scope.selected = selectedItem;
         }, function () {
             $log.info('Modal dismissed at: ' + new Date());
         });
     };
+    $scope.register = function() {
+        var modalRegister = $modal.open ({
+            templateUrl: 'register.html',
+            controller: modalRegisterCtrl
+        });
+        modalLogin.result.then(function(){
+
+        }, function () {
+            $log.info('Modal dismissed at: ' + new Date());
+        });
+    }
 };
 
-var ModalInstanceCtrl = function ($scope, $modalInstance, $http) {
-console.log($scope.profile);
-    $scope.ok = function () {
+var modalLoginCtrl = function($scope, $http, $modalInstance) {
+    $scope.credentials = {email: '',password: ''};
+    $scope.login = function () {
         $http({
             method: 'POST',
-            url: '/profile/save',
-            data: $scope.profile
+            url: '/verify',
+            data: $scope.credentials
         }).
             success(function(){
-                $modalInstance.dismiss('cancel')
+                $modalInstance.close()
             }).
             error(function(){
-
             })
     };
-
     $scope.cancel = function () {
-        $modalInstance.dismiss('cancel');
+        $modalInstance.close();
     };
 };
+
+var modalRegisterCtrl = function($scope, $http, $modalInstance) {
+    $scope.credentials = {email: '', password: ''};
+    $scope.register = function() {
+        $http({
+            method: 'POST',
+            url: '/proceed',
+            data: $scope.credentials
+        }).
+            success(function() {
+                $modalInstance.close()
+            }).error(function(){
+            })
+    }
+    $scope.cancel = function () {
+        $modalInstance.close();
+    };
+}
