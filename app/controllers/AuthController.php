@@ -24,7 +24,7 @@ class AuthController extends BaseController
         $user = new User();
         if($user->Correct($user_credentials) === false)
         {
-            $user->Register($user_credentials, $this->makeToken());
+            $user = $user->Register($user_credentials, $this->makeToken());
             Session::put('token', $user->token);
             return Redirect::to('/');
         }
