@@ -4,16 +4,23 @@ class AuthController extends BaseController
     public function Proceed()
     {
         $user_credentials = Input::all();
-        $user = new User();
-        if($user->Correct($user_credentials) === false)
+        if( ! empty($user_credentials['email']) && ! empty($user_credentials['password']))
         {
-            $user = $user->Register($user_credentials, $this->makeToken());
-            Session::put('token', $user->token);
-            return 'Ok';
+            $user = new User();
+            if($user->Correct($user_credentials) === false)
+            {
+                $user = $user->Register($user_credentials, $this->makeToken());
+                Session::put('token', $user->token);
+                return 'Ok';
+            }
+            else
+            {
+                return 'Bad';
+            }
         }
         else
         {
-            return 'Bad';
+            return 'empty';
         }
     }
 

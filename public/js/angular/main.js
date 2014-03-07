@@ -51,20 +51,30 @@ var modalLoginCtrl = function($scope, $http, $modalInstance, $window) {
 var modalRegisterCtrl = function($scope, $http, $modalInstance, $window) {
     $scope.credentials = {email: '', password: ''};
     $scope.register = function() {
-        $http({
-            method: 'POST',
-            url: '/proceed',
-            data: $scope.credentials
-        }).
-            success(function(data) {
-                if(data === 'Ok') {
-                    $modalInstance.close();
-                    $window.location.href = '/';
-                }
-                if(data === 'Bad') {
+        if($scope.credentials['password'] === $scope.credentials['repassword']) {
+            $http({
+                method: 'POST',
+                url: '/proceed',
+                data: $scope.credentials
+            }).
+                success(function(data) {
+                    if(data === 'Ok') {
+                        $modalInstance.close();
+                        $window.location.href = '/';
+                    }
+                    if(data === 'Bad') {
+                        $scope.error = 'Incorrect data provided';
+                    }
+                    if(data === 'empty') {
+                        $scope.error = 'Please fill in data';
+                    }
+                }).
+                error(function() {
                     $scope.error = 'Incorrect data provided';
-                }
-            })
+                })
+        } else {
+            $scope.error = 'Passwords not match';
+        }
     };
     $scope.cancel = function () {
         $modalInstance.close();
