@@ -270,6 +270,11 @@
 
 .nav_bar_login {
     padding-bottom: 5px;
+    cursor: pointer;
+}
+
+.nav_bar_register {
+    cursor: pointer;
 }
 
 #login_field_email {

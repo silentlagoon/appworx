@@ -54,10 +54,10 @@
                 <div ng-controller="ModalCtrl">
                     <div class="nav_bar_login_register">
                         <div class="nav_bar_login" ng-click="login()">
-                            Login
+                            <a href="javascript:;">Login</a>
                         </div>
                         <div class="nav_bar_register" ng-click="register()">
-                           Register
+                           <a href="javascript:;">Register</a>
                         </div>
                     </div>
                 </div>
