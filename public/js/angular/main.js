@@ -58,7 +58,7 @@ var modalRegisterCtrl = function($scope, $http, $modalInstance, $window) {
         }).
             success(function(data) {
                 if(data === 'Ok') {
-                    $modalInstance.close()
+                    $modalInstance.close();
                     $window.location.href = '/';
                 }
                 if(data === 'Bad') {
